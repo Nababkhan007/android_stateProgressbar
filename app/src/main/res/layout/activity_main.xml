@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.kofigyan.stateprogressbar.StateProgressBar
+                android:id="@+id/stateProgressbarId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:spb_currentStateNumber="one"
+                app:spb_maxStateNumber="three"
+                app:spb_stateBackgroundColor="#BDBDBD"
+                app:spb_stateForegroundColor="#009688"
+                app:spb_stateNumberBackgroundColor="#808080"
+                app:spb_stateNumberForegroundColor="#eeeeee"
+                app:spb_currentStateDescriptionColor="#009688"
+                app:spb_stateDescriptionColor="#808080"
+                app:spb_animateToCurrentProgressState="true"
+                app:spb_checkStateCompleted="true"/>
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="?attr/actionBarSize"
+                android:id="@+id/frameLayoutId"
+                android:layout_below="@id/stateProgressbarId">
+
+            </FrameLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/nextBtnId"
+                android:text="Next Step"
+                android:layout_alignParentBottom="true"/>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
